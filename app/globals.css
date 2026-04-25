@@ -91,7 +91,7 @@
   /* Secondary & Accent */
   --color-accent-line: #5C5550; /* Darker line to contrast with darker BG */
   --color-accent-hover: #4A4440;
-  --color-header-bg: #4A5D4A; /* Muted Olive for header */
+  --color-header-bg: #3E3E3E; /* Rich Charcoal Brown for header */
   --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
 
   /* Typography */
