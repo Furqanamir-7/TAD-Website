@@ -92,6 +92,7 @@
   --color-accent-line: #5C5550; /* Darker line to contrast with darker BG */
   --color-accent-hover: #4A4440;
   --color-header-bg: #3E3E3E; /* Rich Charcoal Brown for header */
+  --color-box-bg: #7A6F65; /* Darker taupe for boxes - darker than main background */
   --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
 
   /* Typography */
@@ -114,6 +115,7 @@
   --color-accent-line: var(--color-accent-line);
   --color-accent-hover: var(--color-accent-hover);
   --color-header-bg: var(--color-header-bg);
+  --color-box-bg: var(--color-box-bg);
 
   --font-serif: var(--font-euclid);
   --font-sans: var(--font-euclid);
