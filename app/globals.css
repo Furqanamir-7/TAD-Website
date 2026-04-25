@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+/* Euclid Circular A Font Family */
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Light Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Medium Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A SemiBold Italic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url('/fonts/Euclid Circular A Bold Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Primary Palette - Warm Textured Concrete/Kraft Paper */
+  --color-bg-main: #9D9288; /* Warm Taupe - Base Color */
+  --color-bg-sec: #1A1A1A;  /* Dark charcoal, almost black */
+  --color-text-pri: #0F0F0F;
+  --color-text-sec: #EBEAE5;
+
+  /* Secondary & Accent */
+  --color-accent-line: #5C5550; /* Darker line to contrast with darker BG */
+  --color-accent-hover: #4A4440;
+  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+
+  /* Typography */
+  --font-euclid: 'Euclid Circular A', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 120px;
+  --space-2xl: 180px;
+}
+
+@theme inline {
+  --color-bg-main: var(--color-bg-main);
+  --color-bg-sec: var(--color-bg-sec);
+  --color-text-pri: var(--color-text-pri);
+  --color-text-sec: var(--color-text-sec);
+  --color-accent-line: var(--color-accent-line);
+  --color-accent-hover: var(--color-accent-hover);
+
+  --font-serif: var(--font-euclid);
+  --font-sans: var(--font-euclid);
+
+  --shadow-soft: var(--shadow-soft);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #9D9288;
+  color: var(--color-text-pri);
+  font-family: var(--font-euclid);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fixed texture background using pseudo-element for iOS compatibility */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/texture-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Dark sections should NOT have the texture background */
+.bg-\[var\(--color-bg-sec\)\] {
+  background-image: none !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-euclid);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h4 {
+  font-family: var(--font-euclid);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Mobile-safe full height utility */
+.h-screen-safe {
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height - accounts for mobile browser chrome */
+}
+
+/* Prevent layout shift from images */
+img {
+  height: auto;
+  max-width: 100%;
+}
