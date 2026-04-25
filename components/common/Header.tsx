@@ -32,7 +32,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? "py-4 border-b border-[var(--color-accent-line)]/20"
+          ? "bg-[var(--color-header-bg)] py-4 border-b border-[var(--color-accent-line)]/20"
           : "bg-transparent py-8"
       }`}
     >
@@ -54,10 +54,10 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm tracking-wide transition-colors hover:text-[var(--color-accent-hover)] ${
+              className={`text-sm tracking-wide transition-colors hover:text-white/90 ${
                 pathname === item.href
-                  ? "text-[var(--color-text-pri)] font-medium border-b border-[var(--color-text-pri)]"
-                  : "text-[var(--color-text-pri)]/80"
+                  ? "text-white font-medium border-b border-white"
+                  : "text-white/80"
               }`}
             >
               {item.label}
@@ -67,7 +67,9 @@ export function Header() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden z-50 p-2"
+          className={`md:hidden z-50 p-2 transition-colors ${
+            isScrolled || mobileMenuOpen ? "text-white" : "text-[var(--color-text-pri)]"
+          }`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >

@@ -91,6 +91,7 @@
   /* Secondary & Accent */
   --color-accent-line: #5C5550; /* Darker line to contrast with darker BG */
   --color-accent-hover: #4A4440;
+  --color-header-bg: #4A5D4A; /* Muted Olive for header */
   --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
 
   /* Typography */
@@ -112,6 +113,7 @@
   --color-text-sec: var(--color-text-sec);
   --color-accent-line: var(--color-accent-line);
   --color-accent-hover: var(--color-accent-hover);
+  --color-header-bg: var(--color-header-bg);
 
   --font-serif: var(--font-euclid);
   --font-sans: var(--font-euclid);
