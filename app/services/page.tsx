@@ -51,20 +51,20 @@ export default function ServicesPage() {
             <Link 
               key={service.id} 
               href={`/services/${service.id}`}
-              className="group flex flex-col md:flex-row items-baseline md:items-center justify-between py-12 border-b border-white/20 bg-[#3E3E3E] text-white px-8 -mx-8 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+              className="group flex flex-col md:flex-row items-baseline md:items-center justify-between py-12 border-b border-[var(--color-accent-line)]/30 bg-[var(--color-bg-main)] text-[var(--color-text-pri)] px-8 -mx-8 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
             >
               <div className="flex items-baseline space-x-8 md:space-x-16">
-                 <span className="font-mono text-sm text-white/60 group-hover:text-white/80 transition-colors">
+                 <span className="font-mono text-sm text-[var(--color-text-pri)]/60 group-hover:text-[var(--color-text-pri)]/80 transition-colors">
                     {service.number}
                  </span>
-                 <h2 className="font-serif text-3xl md:text-4xl text-white group-hover:translate-x-4 transition-transform duration-500">
+                 <h2 className="font-serif text-3xl md:text-4xl text-[var(--color-text-pri)] group-hover:translate-x-4 transition-transform duration-500">
                     {service.title}
                  </h2>
               </div>
               
               <div className="mt-6 md:mt-0 flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                  <span className="text-xs tracking-widest uppercase mr-4 text-white">View Details</span>
-                  <ArrowRight size={20} className="text-white" />
+                  <span className="text-xs tracking-widest uppercase mr-4 text-[var(--color-text-pri)]">View Details</span>
+                  <ArrowRight size={20} className="text-[var(--color-text-pri)]" />
               </div>
             </Link>
           ))}

@@ -50,20 +50,20 @@ export default function ContactPage() {
                  </div>
              </div>
              
-             {/* Right: Form (Rich Charcoal Brown) */}
-             <div className="w-full lg:w-3/5 bg-[#3E3E3E] text-white p-12 lg:p-16">
+             {/* Right: Form (Background Matching) */}
+             <div className="w-full lg:w-3/5 bg-[var(--color-bg-main)] text-[var(--color-text-pri)] p-12 lg:p-16">
                  <form className="space-y-12" onSubmit={(e) => e.preventDefault()}>
                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <Input label="First Name" placeholder="John" darkVariant />
-                        <Input label="Last Name" placeholder="Doe" darkVariant />
+                        <Input label="First Name" placeholder="John" />
+                        <Input label="Last Name" placeholder="Doe" />
                     </div>
-                    <Input label="Email Address" type="email" placeholder="john@example.com" darkVariant />
-                    <Input label="Phone (Optional)" type="tel" placeholder="+1 (555) 000-0000" darkVariant />
+                    <Input label="Email Address" type="email" placeholder="john@example.com" />
+                    <Input label="Phone (Optional)" type="tel" placeholder="+1 (555) 000-0000" />
                      
                      <div>
-                         <label className="block text-xs font-bold tracking-wider uppercase text-white/70 mb-2">Message</label>
+                         <label className="block text-xs font-bold tracking-wider uppercase text-[var(--color-text-pri)]/70 mb-2">Message</label>
                          <textarea 
-                            className="w-full h-32 border-b border-white/30 bg-transparent resize-none p-2 text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors"
+                            className="w-full h-32 border-b border-[var(--color-accent-line)] bg-transparent resize-none p-2 text-[var(--color-text-pri)] placeholder-[var(--color-text-pri)]/50 focus:outline-none focus:border-[var(--color-text-pri)] transition-colors"
                             placeholder="Tell us about your project..."
                          ></textarea>
                      </div>
