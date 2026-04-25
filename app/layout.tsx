@@ -21,6 +21,12 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "TAD Architectural Firm",
   description: "Precise, timeless, and minimal architectural design.",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
