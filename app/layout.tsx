@@ -27,6 +27,24 @@ export const metadata: Metadata = {
       { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
     ],
   },
+  openGraph: {
+    title: "TAD Architectural Firm",
+    description: "Precise, timeless, and minimal architectural design.",
+    images: [
+      {
+        url: '/metadata-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'TAD Architectural Firm',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "TAD Architectural Firm",
+    description: "Precise, timeless, and minimal architectural design.",
+    images: ['/metadata-image.png'],
+  },
 };
 
 export default function RootLayout({
